@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>evbnfont frontend</title>
+	<link rel="stylesheet" href="https://evie.gbdev.io/style.css">
+	</head>
+	<body>
+		<!-- This "page" and "header" make the frontend consistent with the rest of my site -->
+		<header><iframe class="header" src="https://evie.gbdev.io/header.html"></iframe></header>
+	<div class="page">
+		<script src="./bootstrap.js"></script>
+		<noscript>
+			This page contains webassembly and javascript content, please enable javascript in your browser.
+		</noscript>
+
+		<h1>
+			Bitmap Font converter
+		</h1>
+
+		<p>
+			This is a frontend for
+			<a href="https://github.com/eievui5/evbmfont">evbmfont</a>.
+			You can use it to create <code>.fnt</code> files.
+		</p>
+
+		<p>
+			Upload an image below and hit convert.
+			The <code>.fnt</code> file will be returned <em>as text</em>.
+			Copy and paste the generated text into a file and make sure the file extension is <code>.fnt</code>.
+		</p>
+		<p>
+			Remember that <code>.fnt</code> files require a local copy of the source image.
+			By default, the generated file assumes its source image is adjacent to it in the filesystem.
+			You can change this by editing the 3rd line of the <code>.fnt</code> file.
+		</p>
+
+		<hr>
+
+		<label for="image">Image:</label>
+		<br>
+		<input type="file" id="image" name="image" accept="image/png, image/jpeg"/>
+		<br>
+		<br>
+		<label for="width">Width:</label>
+		<br>
+		<input type="number" id="width" name="width" min="1" value="8"/>
+		<br>
+		<br>
+		<label for="height">Height:</label>
+		<br>
+		<input type="number" id="height" name="height" min="1" value="8"/>
+		<br>
+		<br>
+		<label for="firstChar">First character in image (blank for space):</label>
+		<br>
+		<input type="text" id="firstChar" name="firstChar"/>
+
+		<br>
+		<br>
+
+		<button id="convert" style="color: white">Convert</button>
+
+		<hr>
+
+		<button hidden id="copyButton" style="color: white">Copy output to clipboard</button>
+		<a hidden id="downloadButton"><button style="color: white">Download Output</button></a>
+		<br>
+		<div style="background-color: #FFF; color: #000; width: auto; border: 20px solid #FFF;">
+		<code id="fntOutput">
+			Output will appear here.
+		</code>
+		</div>
+	</div>
+	</body>
+</html>
