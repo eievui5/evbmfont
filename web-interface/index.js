@@ -5,7 +5,7 @@
 // will "boot" the module and make it ready to use. Currently browsers
 // don't support natively imported WebAssembly as an ES module, but
 // eventually the manual initialization won't be required!
-import init, { convert_image, set_panic_hook } from './web-interface/pkg/evbmfont_frontend.js';
+import init, { convert_image, set_panic_hook } from './pkg/evbmfont_frontend.js';
 
 async function run() {
 

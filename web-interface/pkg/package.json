@@ -1,0 +1,15 @@
+{
+  "name": "evbmfont-frontend",
+  "collaborators": [
+    "evie <14899090+eievui5@users.noreply.github.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "evbmfont_frontend_bg.wasm",
+    "evbmfont_frontend.js"
+  ],
+  "module": "evbmfont_frontend.js",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
