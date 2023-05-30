@@ -8,4 +8,4 @@ I couldn't find a spec for this, but it's a format accepted by Godot and some ot
 Note that .fnt files rely on a local copy of the source image.
 You may have to adjust the `image` field (line 3).
 
-You can use this tool online here: https://evie.gbdev.io/evbmfont-frontend/
+You can use this tool online here: https://evie.gbdev.io/evbmfont/
